@@ -1,14 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modell;
 
-/**
- *
- * @author vizsgaszf
- */
-public class Konzerv {
-    
+import java.io.File;
+import java.time.LocalDate;
+
+public class Konzerv extends Elelmiszer {
+
+    private String leiras;
+    private File ajanlas;
+
+    public Konzerv(String nev, String gyarto) throws LejaratiDatumException {
+        super(nev, gyarto);
+    }
+
+    public Konzerv(String leiras, String nev, String gyarto) throws LejaratiDatumException {
+        super(nev, gyarto);
+        this.leiras = leiras;
+    }
+
+    public Konzerv(String leiras, String nev, String gyarto, LocalDate lejaratiDatum) throws LejaratiDatumException {
+        super(nev, gyarto, lejaratiDatum);
+        this.leiras = leiras;
+    }
+
+    void receptMutat() {
+        if (ajanlas.exists()) {
+
+        } else {
+
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Konzerv{" + "leiras=" + leiras + '}';
+    }
+
 }
